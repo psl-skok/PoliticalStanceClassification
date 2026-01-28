@@ -68,3 +68,67 @@ Logistic Regression was preferred over Naive Bayes due to:
 - Accuracy: ~71%
 - Balanced precision and recall across classes
 
+                  precision    recall  f1-score   support
+
+      Conservative       0.63      0.61      0.62       185
+      Liberal            0.76      0.78      0.77       291
+
+      accuracy                               0.71       476
+      macro avg          0.69      0.69      0.69       476
+      weighted avg       0.71      0.71      0.71       476
+
+## Model Interpretability
+
+One advantage of Logistic Regression is coefficient interpretability. The learned weights reveal meaningful political language patterns.
+
+### Top Conservative-Associated Terms
+- libertarian
+- free market
+- capitalism
+- property
+- anarcho-capitalism
+- russia / ukraine
+
+### Top Liberal-Associated Terms
+- social
+- democratic
+- workers
+- union
+- progressive
+- social democracy
+- community
+
+These terms align well with real-world ideological framing, indicating the model is learning coherent semantic signals rather than spurious correlations.
+
+---
+
+## Limitations
+
+- Reddit users are not representative of the broader electorate
+- Political ideology is reduced to a binary label
+- Language evolves rapidly; models may degrade over time
+
+---
+
+## Future Work
+
+- Add cross-validation and systematic hyperparameter tuning
+- Compare against Naive Bayes and linear SVM baselines
+- Evaluate ROC-AUC and decision threshold tradeoffs
+- Explore transformer-based models for comparison
+- Extend to multi-class or ideology spectrum classification
+
+---
+
+## Technologies Used
+
+- Python
+- pandas, NumPy
+- scikit-learn
+- Jupyter Notebook
+
+---
+
+## Project Motivation
+
+This project was built to deepen understanding of applied NLP and machine learning fundamentals while producing a portfolio-quality artifact suitable for technical interviews and data-focused roles.
