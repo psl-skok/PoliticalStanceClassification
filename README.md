@@ -13,14 +13,9 @@ The dataset consists of political Reddit posts labeled by political leaning.
 **Preprocessing steps:**
 - Removed rows with missing text or labels
 - Filtered out very short posts (length ≤ 20 characters)
-- Cleaned common Reddit artifacts (e.g., zero-width Unicode characters)
+- Cleaned common text/speach artifacts 
 
-Due to size and source considerations, the full dataset is not included in this repository.
-
-- A small sample dataset may be provided for reproducibility
-- Instructions or a link to the full dataset can be added in `data/README.md`
-
-> **Note:** Reddit data is noisy and not representative of the general population. Results should be interpreted accordingly.
+The full dataset and a short, viewable version of the dataset are available in the Data folder of this repository.
 
 ---
 
@@ -34,7 +29,7 @@ Due to size and source considerations, the full dataset is not included in this 
 ### Feature Engineering: TF-IDF
 Text was vectorized using `TfidfVectorizer` with the following design choices:
 - **Unigrams and bigrams (`ngram_range=(1,2)`)** to capture short phrases and context
-- **`min_df=5`** to remove rare, noisy terms
+- **`min_df=2`** to remove rare, noisy terms
 - **`max_df=0.8`** to remove overly common, low-information terms
 - **Maximum feature limit** to control dimensionality
 - **English stopwords removed** to improve interpretability
